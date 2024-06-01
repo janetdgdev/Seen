@@ -1,0 +1,52 @@
+<%- include('partials/header') -%>
+
+<!-- <label>
+  <input type="checkbox" class="alertCheckbox" autocomplete="off" />
+  <div class="alert error">
+    <span class="alertClose">X</span>
+    <% if (locals.messages.errors) { %>
+      <% messages.errors.forEach( el => { %>
+    <span class="alertText">
+      <%= el.msg %>
+      <br class="clear"/>
+    </span>
+        <% }) %>
+    <% } %>
+    <% if (locals.messages.info) { %>
+      <% messages.info.forEach( el => { %>
+      <span class="alertText">
+        <%= el.msg %>
+        <br class="clear"/>
+      </span>
+    <% }) %>
+    <% } %>
+		<br class="clear"/></span>
+  </div>
+</label> -->
+<div class="auth-container">
+  <form class="auth-form signup" action="/login" method="POST">
+    <div class="form-body">
+      <h3>Sign Up</h3>
+      <label for="username">User Name</label>
+      <input type="text" id="username" name="userName" placeholder="Email or Phone">
+      <label for="exampleInputEmail1" >Email address</label>
+      <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email">
+      <span id="emailHelp">We'll never share your email with anyone else.</span>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Password">
+      <span id="passwordHelpInline">
+        Must be 8-20 characters long.
+      </span>
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
+      </div>
+    <button type="submit">Submit</button>
+    <div class="form-footer">
+      <label>Already a Member?</label>
+      <a href="/login">Login</a>
+    </div>
+  </form>
+</div>
+
+
+<%- include('partials/footer') -%>

@@ -1,0 +1,14 @@
+<%- include('partials/header') -%>
+<section class="content">
+  <h2 class="heading">Collect artwork you have seen irl</h2>
+  <div class="gallery u-grid">
+    <% for(var i=0; i<posts.length; i++) {%>
+    <a href="/post/<%= posts[i]._id%>" class="gallery__link">
+      <figure class="gallery__thumb">
+        <img src="<%= posts[i].image%>" alt="Portrait by Jessica Felicio" class="gallery__image">
+      </figure>
+    </a>
+    <% } %>
+  </div>
+</section>
+<%- include('partials/footer') -%>

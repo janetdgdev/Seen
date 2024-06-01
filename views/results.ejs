@@ -1,0 +1,20 @@
+<%- include('partials/header') -%>
+<div class="search-results">
+    <h3>Search Results for "<%= searchQuery %>"</h3>
+    <div class="card-grid">
+        <% if (items.length > 0) { %>
+            <% items.forEach(item => { %>
+                <div class="card-style">
+                    <img src="<%= item.link %>" alt="thumbnail">
+                    <div class="card-content">
+                        <h2><%= item.title %></h2>
+                        <button><a href="#">Seen!</a></button>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No results found.</p>
+        <% } %>
+    </div>
+</div>
+<%- include('partials/footer') -%>
