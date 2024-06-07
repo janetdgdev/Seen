@@ -4,12 +4,13 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://i.imgur.com/8WHs8z2.jpeg" alt="project-screenshot" width="300px" height="250/">
+<div style="display: flex, flex-wrap: nowrap">
+    <img src="https://i.imgur.com/8WHs8z2.jpeg" alt="project-screenshot" width="300px" height="250/">
 
-<img src="https://i.imgur.com/f3HCoQT.jpeg" alt="project-screenshot" width="325px" height="250/">
+    <img src="https://i.imgur.com/f3HCoQT.jpeg" alt="project-screenshot" width="325px" height="250/">
 
-<img src="https://i.imgur.com/cnWB9GQ.png" alt="project-screenshot" width="300px" height="250/">
-
+    <img src="https://i.imgur.com/cnWB9GQ.png" alt="project-screenshot" width="300px" height="250/">
+</div>
 <h2>🛠️ Installation Steps:</h2>
 
 <p>1. Install</p>
