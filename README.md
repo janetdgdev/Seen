@@ -4,7 +4,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://i.imgur.com/8WHs8z2.jpeg" alt="project-screenshot" width="350px" height="250/"><img src="https://i.imgur.com/f3HCoQT.jpeg" alt="project-screenshot" width="375px" height="250/"><img src="https://i.imgur.com/cnWB9GQ.png" alt="project-screenshot" width="350px" height="250/">
+<img src="screenshots/sc1.png" alt="project-screenshot" width="350px" height="250/"><img src="screenshots/sc2.png" alt="project-screenshot" width="375px" height="250/"><img src="screenshots/sc3.png" alt="project-screenshot" width="350px" height="250/">
 
 
 <h2>🛠️ Installation Steps:</h2>
