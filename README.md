@@ -4,7 +4,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="" alt="project gif" width="700px">
+<img src="screenshots/seen.gif" alt="project gif" width="700px">
 
 <img src="screenshots/sc1.png" alt="project-screenshot" width="350px" height="250/"><img src="screenshots/sc2.png" alt="project-screenshot" width="375px" height="250/"><img src="screenshots/sc3.png" alt="project-screenshot" width="350px" height="250/">
 
