@@ -23,13 +23,13 @@
 		<br class="clear"/></span>
   </div>
 </label> -->
-<div class="auth-container">
+<section class="auth-container">
   <form class="auth-form signup" action="/login" method="POST">
     <div class="form-body">
       <h3>Sign Up</h3>
       <label for="username">User Name</label>
       <input type="text" id="username" name="userName" placeholder="Email or Phone">
-      <label for="exampleInputEmail1" >Email address</label>
+      <label for="exampleInputEmail1">Email address</label>
       <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Email">
       <span id="emailHelp">We'll never share your email with anyone else.</span>
       <label for="password">Password</label>
@@ -39,14 +39,12 @@
       </span>
       <label for="confirmPassword">Confirm Password</label>
       <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password">
-      </div>
-    <button type="submit">Submit</button>
+    </div>
+    <!-- <button type="submit">Submit</button> -->
+    <button class="btn" value="Upload" onclick="demoAlert()">Submit</button>
     <div class="form-footer">
       <label>Already a Member?</label>
       <a href="/login">Login</a>
     </div>
   </form>
-</div>
-
-
-<%- include('partials/footer') -%>
+</section>

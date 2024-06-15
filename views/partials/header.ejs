@@ -29,7 +29,8 @@
             <button class="btn dropbtn" onclick="toggleDropdown(event, 'upload-dropdown')">Upload</button>
             <div id="upload-dropdown" class="upload dropdown-content">
               <h2>Add a post</h2>
-              <form action="/post/createPost" enctype="multipart/form-data" method="POST">
+              <!-- <form action="/post/createPost" enctype="multipart/form-data" method="POST"> -->
+              <form>
                 <div class="title">
                   <label for="title" class="form-label">Title</label>
                   <input type="text" class="form-control" id="title" name="title">
@@ -42,7 +43,8 @@
                   <label for="imageUpload" class="file-upload">Choose Image</label>
                   <input type="file" name="file" id="imageUpload" style="display: none;">
                 </div>
-                <button type="submit" class="btn" value="Upload">Submit</button>
+                <!-- <button type="submit" class="btn" value="Upload">Submit</button> -->
+                <button class="btn" value="Upload" onclick="demoAlert()">Submit</button>
               </form>
             </div>
           </div>
@@ -114,6 +116,11 @@
         }
       });
     });
+
+    function demoAlert (event) {
+      alert('This is just a demo :)')
+      window.location.reload();
+    }
   </script>
 </body>
 
