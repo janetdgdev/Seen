@@ -64,6 +64,23 @@
         <a class="btn login" href="/login">Login</a>
         <% } %>
       </div>
+      <div class="hamburger">
+        <div class="menu">
+          <div class="options">
+            <div class="option selected">Home</div>
+            <div class="option">Profile</div>
+            <div class="option">Upload</div>
+            <div class="option">Logout</div>
+          </div>
+        </div>
+        <svg class="x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 400">
+          <g class="top-bars" stroke-width="4">
+            <path class="bar bar1" d="M 178,20 H 202" />
+            <path class="bar bar2" d="M 178,29 H 202" />
+          </g>
+        </svg>
+        <div class="menu-click-area" onclick="document.querySelector('.hamburger').classList.toggle('active')"></div>
+      </div>
     </nav>
   </header>
   <script>
@@ -117,7 +134,7 @@
       });
     });
 
-    function demoAlert (event) {
+    function demoAlert(event) {
       alert('This is just a demo :)')
       window.location.reload();
     }
