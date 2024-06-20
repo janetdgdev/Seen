@@ -73,11 +73,31 @@
           <div>
             <div>
               <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Upload</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="/feed">Home</a></li>
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="#" onclick="toggleDropdown(event, 'upload-dropdown-mobile')">Upload</a></li>
+                <li><a href="/login">Login</a></li>
               </ul>
+            </div>
+            <div id="upload-dropdown-mobile" class="upload dropdown-content">
+              <h2>Add a post</h2>
+              <!-- <form action="/post/createPost" enctype="multipart/form-data" method="POST"> -->
+              <form>
+                <div class="title">
+                  <label for="title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="title" name="title">
+                </div>
+                <div class="caption">
+                  <label for="caption" class="form-label">Caption</label>
+                  <textarea class="form-control" id="caption" name="caption"></textarea>
+                </div>
+                <div class="file">
+                  <label for="imageUpload" class="file-upload">Choose Image</label>
+                  <input type="file" name="file" id="imageUpload" style="display: none;">
+                </div>
+                <!-- <button type="submit" class="btn" value="Upload">Submit</button> -->
+                <button class="btn" value="Upload" onclick="demoAlert()">Submit</button>
+              </form>
             </div>
           </div>
         </div>
