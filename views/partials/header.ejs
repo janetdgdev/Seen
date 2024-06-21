@@ -104,62 +104,7 @@
       </div>
     </nav>
   </header>
-  <script>
-    function toggleDropdown(event, dropdownContentId) {
-      event.stopPropagation();
-
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.id !== dropdownContentId && openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-
-      document.getElementById(dropdownContentId).classList.toggle("show");
-    }
-
-    document.querySelectorAll(".dropdown").forEach(dropdown => {
-      dropdown.addEventListener("click", function(event) {
-        event.stopPropagation();
-      });
-    });
-
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        for (var i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    };
-
-    document.addEventListener('DOMContentLoaded', function() {
-      const fileInput = document.getElementById('imageUpload');
-      const fileLabel = document.querySelector('label[for="imageUpload"]');
-      const originalColor = window.getComputedStyle(fileLabel).color;
-
-      fileInput.addEventListener('change', function() {
-        if (fileInput.files && fileInput.files.length > 0) {
-          fileLabel.textContent = fileInput.files[0].name;
-          fileLabel.style.color = '#4CAF50';
-          fileLabel.style.borderColor = '#4CAF50';
-        } else {
-          fileLabel.textContent = 'Choose Image';
-          fileLabel.style.color = originalColor;
-          fileLabel.style.borderColor = '#ccc';
-        }
-      });
-    });
-
-    function demoAlert(event) {
-      alert('This is just a demo :)')
-      window.location.reload();
-    }
-  </script>
+ <script src="/public/index.js"></script>
 </body>
 
 </html>
