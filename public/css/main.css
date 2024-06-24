@@ -563,13 +563,15 @@ input[type="file"] {
 }
 
 .feature-wrapper {
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
     position: relative;
     z-index: 1;
 }
 
 .feature-wrapper h1,
-h1 span {
+.feature-wrapper span {
     width: 100%;
     text-align: center;
     font-family: 'Pershotravneva', sans-serif;
@@ -580,7 +582,7 @@ h1 span {
     cursor: default;
 }
 
-h1 span {
+.feature-wrapper span {
     display: inline;
     font-size: clamp(4.8373rem, 3.9461rem + 9.4558vw, 18.1899rem);
     background-size: 140%;
@@ -625,7 +627,6 @@ h1 span {
     display: flex;
     width: 100%;
     font-size: var(--step--1);
-    text-decoration: underline;
     padding: 0.5rem 1rem;
     border: 1px solid #444a44;
     border-radius: 0.2rem;
@@ -633,10 +634,22 @@ h1 span {
     align-items: center;
 }
 
-.user-info img {
-    width: 20%;
+.user-info h2 {
+    width: 50%;
+}
+
+.pc {
+    display: flex;
+    justify-content: end;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 50%;
+}
+.pc img {
+    width: 25%;
     border-radius: 50%;
     border: 1px solid #444a44;
+    margin-right: 0.5rem;
 }
 
 /* ------------- GALLERY ------------- */
@@ -766,8 +779,7 @@ hr.solid {
 .action-btn {
     padding: 0.25rem;
     margin: 0.25rem;
-    border: 2px solid #eee;
-    border-radius: 4px;
+    border: none;
     background-color: transparent;
     cursor: pointer;
 }
@@ -785,13 +797,14 @@ hr.solid {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: fit-content;
+    margin-bottom: 2rem;
 }
 
 .auth-form {
     margin: auto;
     height: fit-content;
-    width: 100vw;
+    max-width: 400px;
     border-radius: 0.5rem;
     border: 1px solid #444a44;
     padding: 3rem 2rem;
@@ -975,6 +988,8 @@ footer {
 /* ------------- RESPONSIVE ---------------- */
 
 @media (min-width: 800px) {
+
+    /* Nav */
     .menu-wrap {
         display: none;
     }
@@ -995,20 +1010,28 @@ footer {
         min-width: 10rem;
     }
 
-    .auth-form {
-        width: 20vw;
-    }
-
-    footer {
-        height: 9rem;
-        font-size: var(--step--1);
-    }
-
-    .post-container {
+    /* Feed */
+    .hero-bg {
         display: flex;
-        width: 100%;
-        height: 75vh;
-        padding: 3rem 0;
+        top: -150px;
+        height: 500px;
+        background-position: center;
+        background-size: 100%;
+    }
+
+    /* User */
+    .user-info img {
+        width: 10%;
+    }
+
+    /* Gallery */
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Post */
+    .post-container {
+        flex-direction: row;
     }
 
     .artwork-image,
@@ -1017,66 +1040,28 @@ footer {
         height: 100%;
     }
 
-    .post-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border: 1px solid #171717;
-        border-radius: 0.5rem;
-    }
-
-    hr.solid {
-        border-top: 1px solid #bbb;
-    }
-
     .description {
-        padding-left: var(--space-2xl);
+        padding-left: var(--space-m);
     }
 
-    .description h2 {
-        font-family: "IBM Plex Mono", sans-serif;
-        font-size: var(--step-2);
-        padding: var(--space-s);
+    /* Auth */
+    .auth-form {
+        width: 50vw;
     }
 
-    .description p {
-        font-family: "IBM Plex Mono", sans-serif;
-        font-size: var(--step-1);
-        padding: 0 1rem;
+    /* Foot */
+    footer {
+        height: 9rem;
+        font-size: var(--step--1);
+    }
+}
+
+@media (min-width: 1100px) {
+    body {
+        margin: var(--space-m) var(--space-2xl-3xl);
     }
 
-    .actions {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        padding: 20px 0;
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
     }
-
-    .actions form,
-    .actions h3 {
-        display: flex;
-        width: 33%;
-        justify-content: space-around;
-        margin: auto;
-        font-size: var(--step-0);
-    }
-
-    .action-btn {
-        padding: 0;
-        margin: 0.25rem;
-        width: 1.5rem;
-        height: 1.5rem;
-        border: 2px solid #eee;
-        border-radius: 4px;
-        background-color: transparent;
-        text-align: center;
-        cursor: pointer;
-    }
-
-    .action-btn svg {
-        padding: 0;
-        margin: 0.10rem;
-        height: 1.5rem;
-    }
-
 }
