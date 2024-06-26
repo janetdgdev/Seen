@@ -646,6 +646,7 @@ input[type="file"] {
     align-items: center;
     width: 50%;
 }
+
 .pc img {
     width: 25%;
     border-radius: 50%;
@@ -1101,6 +1102,12 @@ footer {
 @media (min-width: 2300px) {
 
     body {
-        margin: var(--space-m) 15rem;
+        margin: var(--space-m) 20rem;
     }
+
+    .explore span,
+    .heading {
+        font-size: var(--step-2);
+    }
+
 }
